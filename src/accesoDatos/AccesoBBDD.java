@@ -6,6 +6,7 @@ import logicaRefrescos.Deposito;
 import logicaRefrescos.Dispensador;
 
 public  class AccesoBBDD implements Datos{
+	
 
 	@Override
 	public HashMap<Integer, Deposito> obtenerDepositos() {
