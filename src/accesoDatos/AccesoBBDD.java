@@ -1,6 +1,8 @@
 package accesoDatos;
 
+import java.beans.Statement;
 import java.sql.DriverManager;
+import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.HashMap;
 
@@ -37,11 +39,35 @@ public class AccesoBBDD implements Datos {
 
 	}
 
-	@Override
-	public HashMap<Integer, Deposito> obtenerDepositos() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	//@Override
+//	public HashMap<Integer, Deposito> obtenerDepositos() {
+//		HashMap<String, String> hdep = new HashMap<String, String>();
+//		try {
+//			Statement stmt;
+//			if (conexion != null) {
+//				stmt = conexion.createStatement();
+//				ResultSet rset = stmt.executeQuery(
+//						);
+//				while (rset.next()) {
+//					hdep.put("usuario", "" + rset.getString("Usuario"));
+//					hdep.put("password", rset.getString("Password"));
+//					hdep.put("email", rset.getString("email"));
+//					hdep.put("nombre", "" + rset.getString("Nombre"));
+//					hdep.put("apellidos", rset.getString("Apellidos"));
+//					hdep.put("tipoUsuario", rset.getString("TipoUsuario"));
+//				}
+//
+//				stmt.close();
+//				rset.close();
+//			} else {
+//				System.out.println("conexion Nula");
+//			}
+//		} catch (SQLException e) {
+//			e.printStackTrace();
+//		}
+//		return hdep;
+//
+//	}
 
 	@Override
 	public HashMap<String, Dispensador> obtenerDispensadores() {
@@ -59,6 +85,12 @@ public class AccesoBBDD implements Datos {
 	public boolean guardarDispensadores(HashMap<String, Dispensador> dispensadores) {
 		// TODO Auto-generated method stub
 		return false;
+	}
+
+	@Override
+	public HashMap<Integer, Deposito> obtenerDepositos() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

@@ -40,6 +40,8 @@ public class AccesoFicheros implements Datos {
 			fr.close();
 		} catch (Exception e) {
 			System.out.println("Excepcion leyendo fichero " + fichero + ": " + e);
+			System.out.println("Ruta erronea de fichero");
+			System.exit(-1);
 		}
 
 		return depositosCreados;
@@ -68,6 +70,9 @@ public class AccesoFicheros implements Datos {
 			fr.close();
 		} catch (Exception e) {
 			System.out.println("Excepcion leyendo fichero " + fichero + ": " + e);
+			System.out.println("Ruta erronea de fichero");
+			System.exit(-1);
+			
 		}
 		return dispensadoresCreado;
 	}
